@@ -16,9 +16,8 @@ Devloped using Spring Boot + JWT Authentication at back-end
 
 ```xml
 <dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <scope>runtime</scope>
+<groupId>org.postgresql</groupId>
+<artifactId>postgresql</artifactId>
 </dependency>
 ```
 – or MySQL:
@@ -33,6 +32,7 @@ Devloped using Spring Boot + JWT Authentication at back-end
 Open `src/main/resources/application.properties`
 - 
 - For PostgreSQL:
+
 ```
 spring.datasource.url= jdbc:postgresql://localhost:5432/mydb
 spring.datasource.username= postgres
@@ -47,13 +47,8 @@ philipe.app.jwtSecret= philipeSecretKey
 philipe.app.jwtExpirationMs= 86400000
 
 ## Run Spring Boot application
+FwBlogApplication
 
-# App Properties
-ninvit.app.jwtSecret= ninvitSecretKey
-ninvit.app.jwtExpirationMs= 86400000
-
-## Run Spring Boot application
-```
 ## Run following SQL insert statements
 ```
 INSERT INTO roles(name) VALUES('ROLE_USER');
