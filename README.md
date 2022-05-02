@@ -34,15 +34,19 @@ Open `src/main/resources/application.properties`
 - 
 - For PostgreSQL:
 ```
-spring.datasource.url= jdbc:postgresql://localhost:5432/testdb
+spring.datasource.url= jdbc:postgresql://localhost:5432/mydb
 spring.datasource.username= postgres
 spring.datasource.password= 123456
 
-spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
-spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
-
-# Hibernate ddl auto (create, create-drop, validate, update)
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto= update
+
+# App Properties
+philipe.app.jwtSecret= philipeSecretKey
+philipe.app.jwtExpirationMs= 86400000
+
+## Run Spring Boot application
 
 # App Properties
 ninvit.app.jwtSecret= ninvitSecretKey
